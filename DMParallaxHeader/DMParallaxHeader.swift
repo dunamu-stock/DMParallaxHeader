@@ -41,20 +41,12 @@ class DMParallaxView: UIView {
 /// The `DMParallaxHeader` class represents a parallax header for `UIScrollView`.
 open class DMParallaxHeader: NSObject {
     
+    /// Extends the parallax header under the navigation bar.
+    public var extendsUnderNavigationBar: Bool = true
+    
     /*
      * MARK: - Instance Properties
      */
-    private var _extendsUnderNavigationBar: Bool = true
-    
-    /// Extends the parallax header under the navigation bar.
-    /// - Important: This is obsoleted in iOS 11.
-    @available(iOS, obsoleted: 11) public var extendsUnderNavigationBar: Bool {
-        @available(iOS, obsoleted: 11)
-        get { return _extendsUnderNavigationBar }
-        @available(iOS, obsoleted: 11)
-        set { _extendsUnderNavigationBar = newValue }
-    }
-    
     private var setContentInset: CGFloat?
     
     weak var scrollView: UIScrollView! {
